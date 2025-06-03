@@ -22,4 +22,9 @@ app.MapGet("/time", () => new
     TimeZone = "UTC"
 });
 
+app.MapGet("/date", () => new
+{
+    CurrentDate = DateTime.Now.ToString("dddd, MMMM dd")
+});
+
 app.Run();
